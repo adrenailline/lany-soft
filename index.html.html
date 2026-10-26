@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>LANY soft world tour – Jakarta Day 2</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);
+--bg:#fff;--soft:#f5f7ff;--card:#fff;--tx:#0b1030;--mut:#5d6488;--ac:#3b5bff;--ln:#e6e9f7;
+--c:#00c2ff;--v:#8b5cf6;--p:#ff4fa3;--y:#ffb400;--grad:linear-gradient(90deg,#00c2ff,#3b5bff,#8b5cf6,#ff4fa3)}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--tx);font:14px/1.6 "Poppins",system-ui,-apple-system,"Segoe UI",sans-serif;overflow-x:hidden}
+header{position:relative;text-align:center;padding:44px 18px 30px;overflow:hidden}
+.blob{position:absolute;border-radius:50%;filter:blur(55px);opacity:.55;animation:float 9s ease-in-out infinite}
+.b1{width:260px;height:260px;background:var(--c);left:-70px;top:-60px}
+.b2{width:240px;height:240px;background:var(--p);right:-60px;top:10px;animation-delay:-3s}
+.b3{width:220px;height:220px;background:var(--v);left:35%;bottom:-130px;animation-delay:-6s}
+header>*:not(.blob){position:relative}
+.eyebrow{display:inline-flex;align-items:center;gap:6px;font-size:12px;font-weight:600;color:var(--ac);background:#fff;border:1px solid var(--ln);padding:5px 14px;border-radius:99px;box-shadow:0 4px 14px rgba(59,91,255,.12)}
+h1{margin:16px auto 6px;font-size:clamp(34px,9vw,54px);font-weight:800;letter-spacing:-.03em;line-height:1.08;max-width:640px}
+h1 span{background:var(--grad);background-size:200% auto;-webkit-background-clip:text;background-clip:text;color:transparent;animation:shine 5s linear infinite}
+.sub{color:var(--mut);font-size:13.5px}
+.cd{display:inline-flex;align-items:center;gap:9px;margin-top:18px;padding:10px 18px;border-radius:99px;background:var(--tx);color:#fff;font-weight:600;font-size:13px;box-shadow:0 10px 24px rgba(11,16,48,.25)}
+.cd::before{content:"";width:9px;height:9px;border-radius:50%;background:#37e08a;animation:pulse 1.6s infinite}
+.marq{overflow:hidden;border-block:1px solid var(--ln);background:var(--soft);padding:11px 0;white-space:nowrap}
+.track{display:inline-block;animation:scroll 60s linear infinite;font-weight:600;font-size:13px;color:var(--mut)}
+.track b{color:var(--p);margin:0 16px}
+nav{display:flex;gap:6px;padding:12px 14px;position:sticky;top:env(safe-area-inset-top,0px);z-index:5;overflow-x:auto}
+nav button{flex:0 0 auto;padding:9px 18px;border:1px solid var(--ln);background:rgba(255,255,255,.92);backdrop-filter:blur(8px);color:var(--mut);border-radius:99px;font:600 13px "Poppins",sans-serif;cursor:pointer;transition:.2s}
+nav button:first-child{margin-left:auto}nav button:last-child{margin-right:auto}
+nav button:hover{transform:translateY(-2px);color:var(--tx)}
+nav button.on{background:var(--grad);border-color:transparent;color:#fff;box-shadow:0 8px 20px rgba(139,92,246,.35)}
+main{max-width:680px;margin:0 auto;padding:6px 16px 60px}
+section{display:none}section.on{display:block}
+.card{background:var(--card);border:1px solid var(--ln);border-radius:18px;padding:14px 18px;margin:12px 0;box-shadow:0 2px 6px rgba(11,16,48,.04);animation:up .55s cubic-bezier(.2,.8,.2,1) both;transition:transform .25s,box-shadow .25s}
+.card:hover{transform:translateY(-3px);box-shadow:0 14px 30px rgba(59,91,255,.14)}
+.step{display:flex;gap:14px}
+.step .t{min-width:98px;font-weight:700;color:var(--ac);font-variant-numeric:tabular-nums;font-size:13px}
+.step small{color:var(--mut);display:block;font-size:12.5px}
+.step.done{opacity:.4}
+.step.now{border-color:var(--ac);background:linear-gradient(135deg,#eef2ff,#fdf0f8);animation:up .55s both,glow 2s infinite}
+.badge{font-size:11px;font-weight:700;background:var(--grad);color:#fff;border-radius:99px;padding:2px 10px;text-decoration:none;display:inline-block}
+a.badge{background:#eef2ff;color:var(--ac);transition:.2s}
+a.badge:hover{background:var(--ac);color:#fff}
+h2{font-size:13px;margin:24px 2px 2px;color:var(--tx);font-weight:700;display:flex;align-items:center;gap:8px}
+h2::before{content:"";width:10px;height:10px;border-radius:50%;background:var(--grad)}
+label{display:flex;gap:10px;align-items:flex-start;padding:7px 0;cursor:pointer}
+input[type=checkbox]{width:19px;height:19px;accent-color:var(--v);margin-top:3px}
+.bar{height:10px;background:var(--soft);border-radius:9px;overflow:hidden}
+.bar i{display:block;height:100%;background:var(--grad);background-size:200% auto;animation:shine 3s linear infinite;width:0;transition:width .5s}
+#pct{font-size:20px}
+.song{display:flex;gap:14px;align-items:flex-start}
+.n{color:#fff;font-weight:700;min-width:32px;height:32px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:12.5px;background:linear-gradient(135deg,#00c2ff,#3b5bff)}
+.song:nth-child(4n+2) .n{background:linear-gradient(135deg,#3b5bff,#8b5cf6)}
+.song:nth-child(4n+3) .n{background:linear-gradient(135deg,#8b5cf6,#ff4fa3)}
+.song:nth-child(4n) .n{background:linear-gradient(135deg,#ff4fa3,#ffb400)}
+.song p{margin:1px 0 7px;color:var(--mut);font-size:13px}
+a{color:var(--ac)}
+.note{font-size:12.5px;color:var(--mut)}
+.reset{margin-top:12px;padding:9px 18px;border-radius:99px;border:1px solid var(--ln);background:#fff;color:var(--tx);font:600 13px "Poppins",sans-serif;cursor:pointer;transition:.2s}
+.reset:hover{background:var(--tx);color:#fff}
+@keyframes up{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
+@keyframes float{50%{transform:translate(18px,26px) scale(1.08)}}
+@keyframes shine{to{background-position:200% center}}
+@keyframes scroll{to{transform:translateX(-50%)}}
+@keyframes pulse{50%{box-shadow:0 0 0 7px rgba(55,224,138,0);opacity:.6}}
+@keyframes glow{50%{box-shadow:0 0 0 6px rgba(59,91,255,.14)}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style>
+</head>
+<body>
+<header>
+<i class="blob b1"></i><i class="blob b2"></i><i class="blob b3"></i>
+<span class="eyebrow">✦ Live concert guide</span>
+<h1>LANY <span>soft world tour</span></h1>
+<div class="sub">Jakarta · Day 2 · Jumat, 30 Oktober 2026 · Indonesia Arena</div>
+<div class="cd" id="cd">…</div>
+</header>
+<div class="marq"><div class="track" id="mq"></div></div>
+<nav>
+<button data-t="jadwal" class="on">Jadwal</button><button data-t="cek">Checklist</button><button data-t="set">Setlist</button><button data-t="info">Info</button>
+</nav>
+<main>
+<section id="jadwal" class="on">
+<div class="note" id="clock"></div>
+<div id="steps"></div>
+<p class="note">Jam adalah estimasi (WIB), dihitung mundur dari tiba di Stasiun Bogor pukul 16.00. Halaman ini menyorot langkah yang seharusnya sedang berlangsung berdasarkan jam di HP kamu.</p>
+</section>
+
+<section id="cek">
+<div class="card"><b id="pct">0%</b> siap <div class="bar" style="margin-top:6px"><i id="fill"></i></div></div>
+<div id="lists"></div>
+<button class="reset" id="reset">Reset checklist</button>
+</section>
+
+<section id="set">
+<div class="card note">Setlist soft world tour (26 lagu) dari kamu. Urutan bisa berubah di Jakarta. Ringkasan tiap lagu hanya gambaran tema umum, bukan lirik, karena lirik dilindungi hak cipta. Tombol "Lihat lirik" membuka pencarian di Genius.</div>
+<div id="songs"></div>
+</section>
+
+<section id="info">
+<div class="card"><b>Venue</b><br>Indonesia Arena, kawasan GBK Senayan, Jakarta. Dari MRT Istora Mandiri jalan kaki sekitar 10 menit.</div>
+<div class="card"><b>Promotor</b><br>TEM Present x Live Nation. Tiket dilaporkan sudah habis terjual.</div>
+<div class="card"><b>Jam pintu &amp; mulai</b><br>Cek e-ticket atau akun resmi promotor. Informasi resmi yang saya temukan hanya menyebut pintu dibuka sore dan konser malam hari, durasi sekitar 2 jam.</div>
+<div class="card"><b>Tips cepat</b><ul style="margin:6px 0 0;padding-left:18px">
+<li>Operasional MRT/KRL biasanya berakhir sekitar tengah malam; siapkan rencana pulang (ojol/taksi) kalau konser selesai larut.</li>
+<li>Bawa tas kecil transparan/minimalis; venue biasanya membatasi tas besar, kamera profesional, dan power bank besar. Cek aturan resmi.</li>
+<li>Cas penuh HP, simpan e-ticket sebagai screenshot.</li>
+<li>Pakai sepatu nyaman; kamu akan banyak jalan dan berdiri.</li>
+<li>Janjian titik kumpul dengan teman kalau sinyal hilang.</li></ul></div>
+<div class="card"><b>Pantau resmi</b><br><a href="https://lanyinjakarta2026.com" target="_blank" rel="noopener">lanyinjakarta2026.com</a></div>
+<p class="note">Catatan: beberapa sumber menyebut konser dua malam (29–30 Okt), sedangkan pengumuman promotor awal menyebut satu malam 30 Okt. Pastikan tanggal di tiketmu.</p>
+</section>
+</main>
+
+<script>
+(function(){
+var D="2026-10-30T";
+function T(h){return new Date(D+h+":00+07:00")}
+var steps=[
+["11:45","13:30","Berangkat dari Citra Raya → Mall Spark","Mobil/ojol via tol, 1,5–2 jam. Kalau macet, berangkat lebih awal."],
+["13:30","13:50","Tiba di Mall Spark","Makan, ke toilet, istirahat."],
+["13:50","14:00","Jalan kaki → MRT Istora","±10 menit"],
+["14:00","14:15","MRT Istora → Dukuh Atas BNI","±10 menit + tunggu"],
+["14:15","14:40","Jalan kaki → KRL Sudirman","10–15 menit, tap in, tunggu kereta"],
+["14:40","16:00","KRL Sudirman → Stasiun Bogor","±1 jam 15 menit"],
+["16:00","16:15","Tiba di Stasiun Bogor","Langsung kembali ke peron arah Jakarta"],
+["16:15","17:30","KRL Bogor → Sudirman","Jam pulang kantor, kemungkinan berdiri"],
+["17:30","17:50","Jalan kaki → MRT Dukuh Atas","10–15 menit"],
+["17:50","18:05","MRT Dukuh Atas → Istora","±10 menit + tunggu"],
+["18:05","18:15","Jalan kaki → Indonesia Arena","±10 menit"],
+["18:15","23:59","Tiba di Indonesia Arena 🎤","Antre masuk, tukar tiket, cari spot. Konser malam hari."]
+];
+var ck=[
+["Wajib",["E-ticket / QR (screenshot juga)","KTP / identitas","Kartu MRT/KRL atau e-money dengan saldo cukup","HP dengan baterai penuh","Uang tunai kecil"]],
+["Bawaan",["Tas kecil sesuai aturan venue","Powerbank kecil (cek aturan)","Earplug / pelindung telinga","Tisu & hand sanitizer","Botol minum kosong (cek aturan)","Obat pribadi / plester","Jas hujan lipat / payung kecil"]],
+["Outfit",["Sepatu nyaman","Pakaian ringan, venue bisa panas","Jaket tipis untuk AC / malam","Lightstick atau aksesori fans (kalau diizinkan)"]],
+["Sebelum berangkat",["Makan cukup","Cek jadwal MRT/KRL terakhir","Rencana pulang malam (ojol/taksi)","Kabari keluarga rute &amp; jam pulang","Cek cuaca Jakarta &amp; Bogor"]],
+["Mental 😄",["Hafalkan sing-along favorit","Siapkan suara","Nikmati, jangan terlalu sibuk rekam"]]
+];
+var songs=[
+["Soft","Pembuka bernuansa lembut yang menyetel suasana seluruh malam.",["Soft"]],
+["Why","Mempertanyakan alasan di balik perasaan dan hubungan yang rumit.",["Why"]],
+["Make Me Forget","Keinginan untuk melupakan seseorang beserta rasa sakitnya.",["Make Me Forget"]],
+["you!","Pengakuan sederhana dan manis tentang seseorang yang spesial.",["you!"]],
+["Thick and Thin","Janji setia untuk tetap ada di masa baik maupun buruk.",["Thick and Thin"]],
+["dna","Rasa terhubung begitu dalam dengan seseorang.",["dna"]],
+["I Don’t Wanna Love You Anymore","Lelah mencintai seseorang dan ingin melepaskan.",["I Don't Wanna Love You Anymore"]],
+["Prettiest Thing I’ve Ever Seen","Kekaguman pada seseorang yang terasa begitu indah.",["Prettiest Thing I've Ever Seen"]],
+["Know You Naked","Keintiman dan mengenal seseorang dari sisi paling jujur.",["Know You Naked"]],
+["When Did You Stop Loving Me?","Mempertanyakan kapan cinta mulai memudar.",["When Did You Stop Loving Me"]],
+["Destiny","Merenungkan takdir dan apakah dua orang memang ditakdirkan bersama.",["Destiny"]],
+["anything 4 u","Rela melakukan apa saja demi orang tersayang.",["anything 4 u"]],
+["Stuck","Terjebak dalam perasaan atau hubungan yang sulit dilepaskan.",["Stuck"]],
+["Sound Of Rain","Suasana melankolis dan kenangan yang datang bersama hujan.",["Sound Of Rain"]],
+["Good Parts","Mengenang sisi indah hubungan di tengah kekurangannya.",["Good Parts"]],
+["Let Me Know","Meminta kejelasan perasaan dari seseorang.",["Let Me Know"]],
+["Super Far / Mean It","Medley: jarak dan rindu yang terasa jauh, lalu ketulusan perasaan.",["Super Far","Mean It"]],
+["Last Forever / Act My Age","Medley: harapan cinta yang abadi dan sisi kekanak-kanakan dalam hubungan.",["Last Forever","Act My Age"]],
+["13","Lagu bernuansa nostalgia dan kenangan.",["13"]],
+["ILYSB","Lagu andalan tentang jatuh cinta yang terasa terlalu cepat dan dalam. Siap-siap sing-along!",["ILYSB"]],
+["pink skies","Menyadari perasaan di tengah sore yang indah dan bittersweet.",["pink skies"]],
+["Alonica","Lagu dari era terbaru yang jadi favorit penggemar.",["Alonica"]],
+["Thru These Tears","Menangis, bertahan, dan perlahan melewati masa sulit.",["Thru These Tears"]],
+["’Cause You Have To","Tentang melakukan sesuatu karena memang harus, meski berat.",["Cause You Have To"]],
+["Malibu Nights","Sisi gelap dan kesepian setelah patah hati; salah satu lagu paling emosional mereka.",["Malibu Nights"]],
+["XXL","Penutup penuh nostalgia tentang cinta yang membesar dan tak mudah dilupakan.",["XXL"]]
+];
+
+var el=function(i){return document.getElementById(i)};
+// tabs
+document.querySelectorAll("nav button").forEach(function(b){b.onclick=function(){
+document.querySelectorAll("nav button,section").forEach(function(x){x.classList.remove("on")});
+b.classList.add("on");el(b.dataset.t).classList.add("on");window.scrollTo(0,0)}});
+
+// schedule
+var sh="";
+steps.forEach(function(s,i){sh+='<div class="card step" id="s'+i+'"><div class="t">'+s[0]+(i<11?"–"+s[1]:"")+'</div><div>'+s[2]+'<small>'+s[3]+'</small></div></div>'});
+el("steps").innerHTML=sh;
+function fmt(ms){var m=Math.floor(ms/60000),d=Math.floor(m/1440),h=Math.floor(m%1440/60);m=m%60;return (d?d+" hari ":"")+h+" jam "+m+" menit"}
+function tick(){
+var now=new Date(),cur=-1;
+steps.forEach(function(s,i){var e=el("s"+i);e.classList.remove("done","now");
+if(now>=T(s[1])&&i<11)e.classList.add("done");
+else if(now>=T(s[0])&&now<T(s[1])){e.classList.add("now");cur=i;
+if(!e.querySelector(".badge"))e.firstChild.nextSibling.insertAdjacentHTML("afterbegin",'<span class="badge">SEKARANG</span> ')}});
+var first=T("11:45");
+el("cd").textContent=now<first?"⏳ Berangkat dalam "+fmt(first-now):(now<T("18:15")?"🚆 Dalam perjalanan":"🎶 Selamat menikmati konser!");
+el("clock").textContent="Waktu sekarang (WIB): "+now.toLocaleTimeString("id-ID",{timeZone:"Asia/Jakarta",hour:"2-digit",minute:"2-digit"});
+}
+tick();setInterval(tick,30000);
+
+// checklist
+var KEY="lany-d2-ck",st={};
+try{st=JSON.parse(localStorage.getItem(KEY)||"{}")||{}}catch(e){st={}}
+var lh="",tot=0;
+ck.forEach(function(g,gi){lh+='<h2>'+g[0]+'</h2><div class="card">';
+g[1].forEach(function(t,ti){var id=gi+"-"+ti;tot++;lh+='<label><input type="checkbox" data-id="'+id+'"'+(st[id]?" checked":"")+'><span>'+t+'</span></label>'});lh+='</div>'});
+el("lists").innerHTML=lh;
+function upd(){var n=Object.keys(st).filter(function(k){return st[k]}).length,p=Math.round(n/tot*100);el("pct").textContent=p+"%";el("fill").style.width=p+"%"}
+function save(){try{localStorage.setItem(KEY,JSON.stringify(st))}catch(e){}}
+el("lists").addEventListener("change",function(e){st[e.target.dataset.id]=e.target.checked;save();upd()});
+el("reset").onclick=function(){st={};save();document.querySelectorAll("#lists input").forEach(function(c){c.checked=false});upd()};
+upd();
+
+// setlist
+var sg="";
+songs.forEach(function(s,i){
+var lk=s[2].map(function(q){return '<a class="badge" href="https://genius.com/search?q='+encodeURIComponent("LANY "+q)+'" target="_blank" rel="noopener">'+(s[2].length>1?q+" – ":"")+'Lihat lirik ↗</a>'}).join(" ");
+sg+='<div class="card song"><div class="n">'+(i+1)+'</div><div><b>'+s[0]+'</b><p>'+s[1]+'</p>'+lk+'</div></div>'});
+el("songs").innerHTML=sg;
+var mq=songs.map(function(x){return x[0]}).join('<b>✦</b>');el("mq").innerHTML=mq+'<b>✦</b>'+mq+'<b>✦</b>';
+document.querySelectorAll(".card").forEach(function(c,i){c.style.animationDelay=(i%12*45)+"ms"});
+})();
+</script>
+</body>
+</html>
